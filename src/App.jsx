@@ -1,14 +1,15 @@
+import Gallery from "./Components/Gallery";
+import SearchForm from "./Components/SearchForm";
+import ThemeToggle from "./Components/ThemeToggle";
 import { useGlobalContext } from "./Global Context/Context";
 
 const App = () => {
-  const { isDarkMode, setIsDarkMode } = useGlobalContext();
   return (
-    <div>
-      <h1>Unsplash Images Starter {console.log(isDarkMode)}</h1>;
-      <button onClick={() => setIsDarkMode(!isDarkMode)}>
-        dark mode toggle
-      </button>
-    </div>
+    <main>
+      <ThemeToggle />
+      <SearchForm />
+      <Gallery />
+    </main>
   );
 };
 export default App;
