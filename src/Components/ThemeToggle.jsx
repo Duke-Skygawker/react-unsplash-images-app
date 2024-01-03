@@ -5,18 +5,17 @@ import { BsFillSunFill } from "react-icons/bs";
 const ThemeToggle = () => {
   const { isDarkMode, toggleDarkMode } = useGlobalContext();
   return (
-    <div>
-      <button onClick={toggleDarkMode}>
+    <div className="toggle-container">
+      <button className="dark-toggle" onClick={toggleDarkMode}>
         {isDarkMode ? (
-          <i style={{ color: "white" }}>
+          <i className="toggle-icon" style={{ color: "white" }}>
             <BsFillMoonStarsFill />
           </i>
         ) : (
-          <i style={{ color: "black" }}>
+          <i className="toggle-icon" style={{ color: "black" }}>
             <BsFillSunFill />
           </i>
         )}
-        Mode Switcher
       </button>
     </div>
   );
